@@ -6,7 +6,7 @@
 #    By: mtrautne <mtrautne@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/10 13:48:46 by mtrautne          #+#    #+#              #
-#    Updated: 2023/12/10 20:51:25 by mtrautne         ###   ########.fr        #
+#    Updated: 2023/12/11 19:09:18 by mtrautne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SRC_DIR =	./src
 OBJ_DIR =	./obj
 
 CPPFILES =	main \
-			Span
+						Span \
+						MyExceptions
 
 HEADER =	Span
 
