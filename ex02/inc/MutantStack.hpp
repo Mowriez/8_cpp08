@@ -6,7 +6,7 @@
 /*   By: mtrautne <mtrautne@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 01:28:35 by mtrautne          #+#    #+#             */
-/*   Updated: 2023/12/12 01:56:04 by mtrautne         ###   ########.fr       */
+/*   Updated: 2023/12/12 02:13:59 by mtrautne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,13 @@
 #include <stack>
 #include <iterator>
 
-template<class T>
+template<typename T>
 class MutantStack : public std::stack<T> {
   public:
-    MutantStack() : std::stack<T>() {};
-    ~MutantStack() {};
-    MutantStack(const MutantStack& other) : std::stack<T>(other) {};
-    MutantStack&  operator=(const MutantStack& other) {
-      if (this != &other)
-        std::stack<T>::operator=(other);
-      return (*this);
-    };
+    MutantStack();
+    ~MutantStack();
+    MutantStack(const MutantStack& other);
+    MutantStack&  operator=(const MutantStack& other);
     
     typedef typename std::stack<T>::container_type::iterator iterator;
 
@@ -41,5 +37,7 @@ class MutantStack : public std::stack<T> {
         return std::stack<T>::c.end();
     }
 };
+
+#include "../src/MutantStack.tpp"
 
 #endif
