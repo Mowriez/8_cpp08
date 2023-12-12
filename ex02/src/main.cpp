@@ -6,7 +6,7 @@
 /*   By: mtrautne <mtrautne@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 01:18:42 by mtrautne          #+#    #+#             */
-/*   Updated: 2023/12/12 01:54:43 by mtrautne         ###   ########.fr       */
+/*   Updated: 2023/12/12 02:21:23 by mtrautne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,6 @@ int main(void) {
   std::stack<int> s(mstack);
   return 0;
 }
+
+
+// reverse and const iterators, etc.

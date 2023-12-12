@@ -6,7 +6,7 @@
 #    By: mtrautne <mtrautne@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/10 13:48:46 by mtrautne          #+#    #+#              #
-#    Updated: 2023/12/12 02:14:43 by mtrautne         ###   ########.fr        #
+#    Updated: 2023/12/12 02:19:33 by mtrautne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,9 +20,9 @@ INC_DIR =	./inc
 SRC_DIR =	./src
 OBJ_DIR =	./obj
 
-CPPFILES =	main \
-
-HEADER =		MutantStack \
+CPPFILES =	main
+TPPFILES =	MutantStack
+HEADER =		MutantStack
 
 INCL =  $(addsuffix .hpp, $(addprefix $(INC_DIR)/, $(HEADER)))
 SRCS =  $(addsuffix .cpp, $(addprefix $(SRC_DIR)/, $(CPPFILES)))
