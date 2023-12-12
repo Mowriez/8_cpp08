@@ -6,7 +6,7 @@
 /*   By: mtrautne <mtrautne@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:44:09 by mtrautne          #+#    #+#             */
-/*   Updated: 2023/12/11 23:08:11 by mtrautne         ###   ########.fr       */
+/*   Updated: 2023/12/12 16:26:02 by mtrautne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,21 @@ int main(void) {
       addList.push_back(i);
     }
     testSpan.addMultipleNumbers(addList.begin(), addList.end());
-    std::list<int>::const_iterator it2 = testSpan.getElements().end();
-    advance(it2, -11);
+    std::list<int>::const_iterator it2 = testSpan.getElements().begin();
+    int j = 14989;
+    advance(it2, j);
     while (it2 != testSpan.getElements().end()) {
-      std::cout << "Element: " << *it2 << std::endl;
+      std::cout << "Element[" << j++ << "]: " << *it2 << std::endl;
       it2++;
     }
+    std::cout << std::endl << "Add numbers until the Span is full" << std::endl;
+    testSpan.addNumber(10);
+    std::cout << "last Element is " << *(--(testSpan.getElements().end())) << std::endl;
+    testSpan.addMultipleNumbers(addList.begin(), addList.end());
+    std::cout << "last Element is " << *(--(testSpan.getElements().end())) << std::endl;
   }
   catch (std::exception &e) {
     std::cerr << e.what() << std::endl;
   }
-
-  
-
   return (0);
 }
